@@ -1,0 +1,30 @@
+.button-small,
+.button-mid,
+.button-large {
+	display: block;
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	line-height: 26px;
+	font-size: 15px;
+	text-decoration: none;
+	border: 1px solid #303030;
+	border-radius: 5px;
+	margin: 40px auto 20px;
+	background: none;
+}
+
+.button-small:hover,
+.button-mid:hover,
+.button-large:hover {
+	color: gray;
+	background: #424242;
+}
+
+.button-small {
+	display: inline-block;
+	width: 32px;
+ 	height: 24px;
+ 	line-height: 20px;
+ 	margin: 0;
+}

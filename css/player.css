@@ -1,0 +1,56 @@
+#player-container {
+	width: 80%;
+	max-width: 900px;
+	height: 34px;
+	position: absolute;
+	top: 12px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+	z-index: 10;
+	/*border: 1px solid red;*/
+}
+#player-audio {
+	width: 100%;
+	max-width: 396px;
+	height: 34px;
+	background: darkgray;
+	position: absolute;
+	top: 18px;
+	right: 0;
+	/*border-left: 1px solid gray;*/
+	/*border-right: 1px solid gray;*/
+	display: none;
+}
+#player-label {
+	display: block;
+	width: 200px;
+	height: 18px;
+	color: darksalmon;
+	font-size: 13px;
+	/*font-weight: bold;*/
+	line-height: 12px;
+	position: absolute;
+	top: -3px;
+	right: 0;
+	opacity: 0.8;
+	/*border: 1px solid red;*/
+	overflow: hidden;
+}
+#player-controls {
+	width: 100%;
+	max-width: 406px;
+	height: 22px;
+	background: #777;
+	position: absolute;
+	top: 189px;
+	right: 0;
+	border-left: 2px solid gray;
+	border-right: 2px solid gray;
+	background: linear-gradient(to bottom, #4c4c4c, #3e3e3e);
+	display: none;
+}
+#player-controls i {
+	padding-left: 4px;
+}

@@ -1,0 +1,303 @@
+.thread-header {
+	width: 95%;
+	height: 24px;
+	background: gray;
+	font-size: 14.5px;
+	padding-left: 28px;
+	margin-bottom: 7px;
+	margin-top: 4px;
+	line-height: 23px;
+}
+.thread-header h3 {
+	/*border: 1px solid red;*/
+	width: 57%;
+	height: 100%;
+	display: inline-block;
+	overflow: hidden;
+}
+.thread-header h4 {
+	width: 12%;
+	height: 100%;
+	display: inline-block;
+	overflow: hidden;
+	text-align: center;
+	/*padding-left: 20px;*/
+	/*border: 1px solid red;*/
+}
+.thread {
+	margin-top: 2px;
+	margin-left: 32px;
+	overflow: hidden;
+	font-size: 1rem;
+}
+.thread a {
+	width: 90%;
+	display: block;
+	height: 22px;
+	text-decoration: none;
+	color: black;
+	padding-left: 10px;
+	border-left: 1px solid black;
+	border-color: #444;
+	overflow: hidden;
+	line-height: 20px;
+}
+.thread a:hover {
+	background: gray;
+	font-weight: 700;
+}
+.thread:first-child {
+	margin-top: 10px;
+}
+.thread .header {
+	display: inline-block;
+	width: 60%;
+	float: left;
+	/*margin-left: 20px;*/
+	/*border: 1px solid red;*/
+	overflow: hidden;
+}
+.thread .messages {
+	display: inline-block;
+	float: left;
+	width: 12%;
+	text-align: center;
+	font-size: 14px;
+	/*font-weight: bold;*/
+}
+.thread .autor {
+	display: inline-block;
+	float: left;
+	width: 12%;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 7px;
+	color: #0b0b0b;
+}
+.thread .time {
+	float: left;
+	width: 12%;
+	text-align: right;
+	font-size: 13px;
+	color: darksalmon;
+	opacity: 0.75;
+}
+.topic-container {
+	width: 90%;
+	/*min-height: 50px;*/
+	margin: 20px auto;
+	position: relative;
+	/*overflow: hidden;*/
+	/*border: 1px solid blue;*/
+	/*background: url('../Views/Images/b45.png');*/
+}
+.topic-container:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: ' ';
+	clear: both;
+	height: 0;
+}
+.topic-avatar {
+	float: left;
+	width: 100px;
+	height: 100px;
+	border: 2px solid #666;
+	border-radius: 5px;
+/*	margin: 0 18px 8px 0;*/
+}
+.small-msg .topic-avatar {
+	width: 70px;
+	height: 70px;
+	margin-left: 15px;
+}
+.topic-message {
+	border: 2px solid #666;
+	border-radius: 5px;
+	margin-left: 110px;
+	padding: 3px 7px 4px 10px;
+	position: relative;
+	min-height: 28px;
+	/*background: #858774;*/
+}
+.topic-message:before {
+	content: ' ';
+	font-size: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 7px 10px 0;
+	border-color: transparent #575757 transparent transparent;
+	border-style: inset;
+	-webkit-transform:rotate(360deg);
+	position: absolute;
+	left: -9px;
+	top: 2px;
+	opacity: 0.2;
+}
+.topic-login {
+	width: 100px;
+	/*display: block;*/
+	height: 18px;
+	/*margin: 0px auto;*/
+	/*border: 1px solid red;*/
+	clear: both;
+	float: left;
+	text-align: center;
+	line-height: 18px;
+	font-weight: 700;
+}
+.topic-login a {
+	color: black;
+	text-decoration: none;
+}
+.topic-login a:hover {
+	color: gray;
+}
+.topic-time {
+	position: absolute;
+	right: -18px;
+	bottom: -2px;
+	font-size: 12px;
+	/* font-family: ""; */
+	font-style: italic;
+	transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg); /* IE 9 */
+    -webkit-transform: rotate(-30deg); /* Safari */
+    -moz-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    writing-mode: rl-tb;
+	color: darksalmon;
+	opacity: 0.8;
+	background: #474747;
+}
+.topic-message .msg-edit {
+	position: absolute;
+	color: #6c6c6c;
+	top: -16px;
+	right: -16px;
+	cursor: default;
+}
+.topic-message .msg-delete {
+	position: absolute;
+	color: #6c6c6c;
+	top: -4px;
+	right: -36px;
+	display: none;
+	cursor: default;
+}
+.topic-message .msg-edit i,
+.topic-message .msg-delete i {
+	font-size: 1.2em;
+}
+.topic-message .msg-edit:hover {
+	color: #787878;
+	font-size: 1.1em;
+}
+.topic-message .msg-delete:hover {
+	color: #787878;
+	font-size: 1.1em;
+}
+.topic-message .msg-edit:hover + .msg-delete {
+	display: block;
+	/*font-size: 1.4em;*/
+}
+.topic-message .msg-delete:hover {
+	display: block;
+	/*font-size: 1.4em;*/
+}
+
+.topic-message q {
+	display: inline-block;
+	border: 1px solid #666;
+	margin: 2px;
+	border-radius: 2px;
+	background: #5c7282;
+}
+.topic-message .forum-smile {
+	width: 14px;
+	height: 14px;
+	margin: 0 7px;
+	padding: 0;
+	position: relative;
+	transform: scale(1.7);
+	opacity: 0.8;
+}
+.topic-message .forum-smile:hover {
+	transform: scale(3);
+	opacity: 1;
+}
+.smile-container {
+	width: 80%;
+	margin: -40px 17% -20px;
+	/*border: 1px solid blue;*/
+}
+.smile-button {
+	width: 28px;
+	height: 28px;
+	border: none;
+	opacity: 0.8;
+}
+.smile-button:hover {
+	transform: scale(1.8);
+	opacity: 1;
+	/*width: 70px;*/
+	/*height: 70px;*/
+}
+.banned {
+	opacity: 0.55;
+}
+.banned:before {
+	content: 'this bastard is banned';
+	width: 220px;
+	height: 100px;
+	position: absolute;
+	top: 10px;
+	left: 4px;
+	color: salmon;
+	font-size: 32px;
+	font-weight: bold;
+	text-transform: uppercase;
+	transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Safari */
+    -moz-transform: rotate(-15deg);
+    -o-transform: rotate(-45deg);
+    writing-mode: rl-tb;
+    z-index: 20;
+}
+.small-msg.banned:before {
+	font-size: 24px;
+	width: 170px;
+	top: 5px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+#main {
+	width: 100%;
+}
+}
+
+@media screen and (max-width: 600px) {
+.thread-header h4 {
+	display: none;
+}
+.thread .header {
+	width: 90%;
+}
+.thread .messages, .thread .author, .thread .date {
+	display: none;
+}
+.topic-avatar {
+	width: 50px;
+	height: 50px;
+}
+.topic-message {
+	margin-left: 55px;
+}
+.topic-login {
+	width: 50px;
+}
+}
