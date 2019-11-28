@@ -285,6 +285,32 @@ class forum_view extends base_view
 					}
 				</script>
 	<?php
+		else:
+	?>
+
+				<form onsubmit="void(null);" class="new-msg forms" method="post" action="#" disabled>
+					<textarea id="msg" rows="5" cols="70" name="msg" required placeholder="Авторизуйтесь для отправки комментария" disabled></textarea>
+					<input type="hidden" name="newmsg" value="true">
+					<button class="button-large" disabled>
+					<i class="icon-pen" aria-hidden="true"></i>Ответить</button>
+				</form>
+
+				<button class="button-small bbcode" onclick="void(null);" disabled ><b>B</b></button>
+				<button class="button-small bbcode" onclick="void(null);" disabled ><var>I</var></button>
+				<button class="button-small bbcode" onclick="void(null);" disabled ><u>U</u></button>
+				<button class="button-small bbcode" onclick="void(null);" disabled ><del>Del</del></button>
+				<span class="bbcode">Выделите текст для обрачивания в тэг</span>
+
+				<div class="smile-container">
+	<?
+			foreach ($this->smiles as $key => $value):
+	?>
+				<button class="smile-button" onclick="void(null);" style="background: url(<?=SMILES_DIR_HTTP?><?=$value?>); background-size: contain;" disabled></button>
+	<?php
+			endforeach;
+	?>
+				</div>
+	<?php
 		endif;
 	?>
 				<a href="<?=$this->backpath?>" class="navigation back"><i class="icon-reply icon2x" aria-hidden="true"></i><span>Назад</span></a>
