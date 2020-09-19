@@ -6,38 +6,7 @@ class user_view extends base_view
 
 	public function signup()
 	{
-		$this->get_header();
-	?>
-		<div id="main">
-			<form class="register" enctype="multipart/form-data" method="post" action="/user/signup">
-				<input type="text" name="login" placeholder="login" required>
-				<input type="password" name="password" placeholder="password" required>
-				<label class="file-container" >Avatar<input type="file" name="avatar" accept="image/*" id="preview-image" onchange="getFileInfo();"></label>
-				<input type="hidden" name="signup" value="true">
-				<button class="new-topic" type="submit">Signup</button>
-			</form>
-			<img class="profile-preview" id="profile-preview" src="">
-		</div>
-		<script>
-			function getFileInfo()
-			{
-				var preview = document.getElementById('preview-image');
-			    if (preview.files && preview.files[0])
-			    {
-			        var reader = new FileReader();
-
-			        reader.onload = function (e) {
-			        	var img = document.getElementById('profile-preview');
-			        	img.src = e.target.result;
-						img.style.display = 'block';
-			        };
-
-			        reader.readAsDataURL(preview.files[0]);
-			    }
-			}
-		</script>
-	<?php
-		$this->get_footer();
+        exit();
 	}
 
 	public function profile($user, $auth, $pers, $admin)

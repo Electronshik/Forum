@@ -3,8 +3,8 @@ abstract class base_view
 {
 
 	private $ajax = FALSE;
-	protected $backpath = 'http://forum.loc';
-	protected $domen = 'forum.loc';
+	protected $backpath = 'http://rocknroll.one';
+	protected $domen = 'rocknroll.one';
 
 	abstract function index();
 
@@ -105,7 +105,7 @@ abstract class base_view
 	<?php
 		else:
 	?>
-				<a class="register" href="/user/signup"><?=$_SESSION['unauth'] ?'Нет такого юзера!':'Регистрация'?></a>
+				<a class="register" href="/"><?=$_SESSION['unauth'] ?'Нет такого юзера!':''?></a>
 				<form method="post" action="/user/signin" class="login">
 				    <p>
 				      <input type="text" name="login" id="login" placeholder="Login" required value="<?=$_SESSION['unauth']['login']?>">

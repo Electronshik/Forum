@@ -13,12 +13,17 @@ class forum_view extends base_view
 		if ($dirs[1] == '..') unset($dirs[1]);
 		foreach ($dirs as $root => $dir)
 		{
-			$files = scandir(SMILES_DIR.$dir.'\\');
+			$files = scandir(SMILES_DIR.$dir.'/');
 			foreach ($files as $key => $value)
 			{
+			    $smile_num = $dir;
+			    if ($smile_num < 10)
+			    {
+			        $smile_num = '0'.$smile_num;
+			    }
 				if ( $num = strripos($value, '.png') )
 				{
-					$this->smiles[$dir.'-'.substr($value, 0, $num)] = $dir.'/'.$value;
+					$this->smiles[$smile_num.'-'.substr($value, 0, $num)] = $dir.'/'.$value;
 				}
 			}
 		}
@@ -212,6 +217,7 @@ class forum_view extends base_view
 					{
 						var topicMsg = href.parentNode.childNodes[1];
 						var txtMsg = topicMsg.innerHTML;
+						txtMsg = txtMsg.replace(/<img class="forum-smile" src="[^"]{1,100}Smiles\/([0-9]{1})\/([0-9a-z_-]{2,24}).[a-z]{3,4}"[^>]{1,34}>/g, "[0$1-$2]");
 						txtMsg = txtMsg.replace(/<img class="forum-smile" src="[^"]{1,100}Smiles\/([0-9]{2})\/([0-9a-z_-]{2,24}).[a-z]{3,4}"[^>]{1,34}>/g, "[$1-$2]");
 						txtMsg = txtMsg.replace(/<q>/g, '[quote]');
 						txtMsg = txtMsg.replace(/<\/q><br>/g, '[\/quote]');
