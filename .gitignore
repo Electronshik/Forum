@@ -1,5 +1,6 @@
 
 
+error_log
 /Models/base_model_class.php
 /Views/Media/
 /Views/Articles/
