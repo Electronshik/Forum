@@ -3,7 +3,7 @@ abstract class base_model
 {
 	public function __construct()
 	{
-		R::setup('mysql:host=localhost; dbname=forum;', 'root', '123');
+		R::setup('mysql:host=localhost; dbname=forum;', 'root', '');
 		// R::fancyDebug(TRUE);
 	}
 	public function __destruct()
