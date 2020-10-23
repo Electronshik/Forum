@@ -1,5 +1,5 @@
 <?php
-class Error
+class Error_Log
 {
 	public static function add_log($text)
 	{
