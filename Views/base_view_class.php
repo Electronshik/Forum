@@ -45,7 +45,7 @@ abstract class base_view
 
 	private function get_html_header()
 	{
-		$root = 'http://'.ROOT.'/';
+		$root = 'https://'.ROOT.'/';
 	?>
 	<!DOCTYPE html>
 	<html lang="en">
